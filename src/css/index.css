@@ -1,0 +1,149 @@
+/* body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+} */
+
+body {
+  background-color: #25262D;
+  font-family: 'Didact Gothic', sans-serif;
+  color: white; /* Remove this later */
+}
+
+p::selection,
+p::-moz-selection {
+  background: #CCF5E3;
+  color: black;
+}
+
+.centered {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  /* min-height: 100vh; */
+}
+
+.really-centered {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 15vh;
+}
+
+
+
+
+@media screen and (max-width: 1200px) and (min-width: 992px) {
+  .socials-container {
+      margin-right: 73px;
+  }
+
+  #unify-top {
+      padding-top: 56px;
+  }
+
+  #unify-bottom {
+      padding-bottom: 56px;
+  }
+}
+
+@media screen and (max-width: 992px) and (min-width: 768px) {
+  .socials-container {
+      margin-right: -7px;
+  }
+
+  #unify-top {
+      padding-top: 68px;
+  }
+
+  #unify-bottom {
+      padding-bottom: 68px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .socials-container {
+      margin-right: 0px;
+      padding-left: 84px;
+  }
+
+  #unify-top {
+      padding-top: 0px;
+  }
+
+  #unify-bottom {
+      padding-bottom: 0px;
+  }
+
+  #python {
+      margin: 0px;
+  }
+
+  .proj-container {
+      margin-bottom: 10px;
+  }
+
+  #headshot {
+      margin-left: 153px;
+  }
+
+  #steam-img{
+      width: 11.7%;
+      height: auto;
+      margin-left: 15px;
+      margin-top: 0px;
+  }
+
+  #email-img {
+      width: 11.7%;
+      height: auto;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  #matt {
+      display: none;
+  }
+
+  .my-nav-css {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+  }
+
+  
+}
+
+@media screen and (max-width: 574px) {
+  .socials-container {
+      display: none;
+  }
+
+  .headshot-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+  }
+
+  #headshot {
+      margin-left: 0;
+      padding: 0;
+  }
+ 
+}

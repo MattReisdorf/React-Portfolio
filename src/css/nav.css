@@ -1,0 +1,26 @@
+/* NAV STYLING */
+#matt {
+    position: absolute;
+    padding-left: 80px;
+    /* font-family: 'Didact Gothic', sans-serif; */
+    color: black; /* Remove after taking out body color */
+}
+
+.my-nav-css {
+    background-color: white;
+    padding-top: 12px;
+    padding-bottom: 10px;
+}
+
+.my-nav-list-css{
+    padding-right: 40px;
+}
+
+.nav-links-css {
+    /* font-family: 'Didact Gothic', sans-serif; */
+    color: black;
+}
+
+.nav-links-css:hover {
+    color: #666669;
+}

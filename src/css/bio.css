@@ -1,0 +1,82 @@
+.row-margin {
+    margin-top: 50px;
+}
+
+.placeholder-box {
+    background-color: red;
+}
+
+#biography-title {
+    /* font-family: 'Didact Gothic', sans-serif; */
+    font-size:2em;
+    color: #FFECD6;
+    padding-left: 3px;
+}
+
+#biography-paragraph {
+    /* font-family: 'Didact Gothic', sans-serif; */
+    color: #DDDEE3;
+}
+
+#headshot{
+    border-radius: 50%;
+    margin-top: 67px;
+}
+
+.socials-container {
+    /* background-color: red; */
+    margin-right: 132px;
+    margin-top: 25px;
+}
+
+.headshot-container {
+    margin-top: -50px;
+}
+
+#email-img {
+    margin-top: 4px;
+    margin-left: 16px;
+    width: 25%;
+    height: auto;
+}
+
+#email-img:hover {
+    transform: scale(1.1);
+}
+
+#linked-in-img {
+    margin-left: 15px;
+}
+
+#linked-in-img:hover {
+    transform: scale(1.1);
+}
+
+#github-img {
+    margin-left: 15px;
+}
+
+#github-img:hover {
+    /* transition: transform .25s ease; */
+    transform: scale(1.1);
+}
+
+#sc-img {
+    margin-left: 15px;
+}
+
+#sc-img:hover {
+    /* transition: transform .25s ease; */
+    transform: scale(1.1);
+}
+
+#steam-img {
+    margin-left: 50px;
+    margin-top: 10px;
+    width: 22%;
+    height: auto;
+}
+
+#steam-img:hover {
+    transform: scale(1.1);
+}

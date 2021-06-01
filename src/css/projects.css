@@ -1,0 +1,47 @@
+#projects{
+    margin-top: 85px;
+}
+
+#projects-title {
+    font-size: 2em;
+    color: #FFECD6;
+}
+
+.card-background {
+    background-color: #373943;
+}
+
+#unify {
+    margin-top:5px;
+    margin-bottom: 2px;
+    color:#FFECD6;
+}
+
+#unify-top {
+    padding-top: 45px;
+}
+
+#unify-bottom {
+    padding-bottom: 45px;
+}
+
+#reddit {
+    margin-top:5px;
+    margin-bottom: 2px;
+    color:#FFECD6;
+}
+
+#python {
+    margin-top: 65px;
+    margin-bottom: 65px;
+}
+
+#scaled {
+    margin-top:5px;
+    margin-bottom: 2px;
+    color:#FFECD6;
+}
+
+#repo-link {
+    color: #FFECD6;
+}
