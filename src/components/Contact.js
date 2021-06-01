@@ -22,22 +22,22 @@ class Contact extends Component {
         event.preventDefault();
         console.log(this.state);
 
-        axios({
-            method: 'post',
-            url: `${API_PATH}`,
-            headers: { 'content-type': 'application/json'},
-            data: this.state
-        })
-            .then(result => {
-                this.setState({
-                    mailSent: result.data.sent
-                })
-            })
-            .catch(
-                error => this.setState({
-                    error: error.message
-                })
-            )
+        // axios({
+        //     method: 'post',
+        //     url: `${API_PATH}`,
+        //     headers: { 'content-type': 'application/json'},
+        //     data: this.state
+        // })
+        //     .then(result => {
+        //         this.setState({
+        //             mailSent: result.data.sent
+        //         })
+        //     })
+        //     .catch(
+        //         error => this.setState({
+        //             error: error.message
+        //         })
+        //     )
 
 
         this.setState({
@@ -58,7 +58,7 @@ class Contact extends Component {
                 <div className = 'row row-margin-2'>
 
                     <div className = 'col-sm-12'>
-                        <form action = '#'>
+                        <form action = '../../public/files/php/index.php' method = 'post'>
                             <div className = 'form-group'>
                                 <label name = 'name'>Name</label>
                                 <input 
