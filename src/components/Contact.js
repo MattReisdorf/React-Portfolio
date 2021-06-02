@@ -1,10 +1,4 @@
 import React, { Component } from 'react';
-import axios from 'axios';
-
-// const API_PATH = 'localhost:3000/public/files/php/index.php';
-let API_Key = MAILGUN_API_KEY;
-let domain= MAILGUN_DOMAIN;
-let mailgun = require('mailgun')({apiKey: API_Key, domain: domain});
 
 
 
@@ -26,15 +20,6 @@ class Contact extends Component {
         event.preventDefault();
         console.log(this.state);
 
-
-        mailgun.messages().send(this.state, (err, body) => {
-            if (err) {
-                console.error(err);
-            }
-            else {
-                console.log(body);
-            }
-        })
        
 
 
