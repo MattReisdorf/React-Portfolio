@@ -1,7 +1,12 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
-const API_PATH = 'localhost:3000/public/files/php/index.php';
+// const API_PATH = 'localhost:3000/public/files/php/index.php';
+let API_Key = MAILGUN_API_KEY;
+let domain= MAILGUN_DOMAIN;
+let mailgun = require('mailgun')({apiKey: API_Key, domain: domain});
+
+
 
 class Contact extends Component {
 
@@ -10,11 +15,10 @@ class Contact extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            name: '',
-            email: '',
-            message: '',
-            error: null,
-            mailSent: false
+            from: '',
+            to: 'mreisdorf9717@gmail.com',
+            subject: '',
+            text: '',
         }
     }
 
@@ -22,22 +26,16 @@ class Contact extends Component {
         event.preventDefault();
         console.log(this.state);
 
-        // axios({
-        //     method: 'post',
-        //     url: `${API_PATH}`,
-        //     headers: { 'content-type': 'application/json'},
-        //     data: this.state
-        // })
-        //     .then(result => {
-        //         this.setState({
-        //             mailSent: result.data.sent
-        //         })
-        //     })
-        //     .catch(
-        //         error => this.setState({
-        //             error: error.message
-        //         })
-        //     )
+
+        mailgun.messages().send(this.state, (err, body) => {
+            if (err) {
+                console.error(err);
+            }
+            else {
+                console.log(body);
+            }
+        })
+       
 
 
         this.setState({
@@ -60,14 +58,14 @@ class Contact extends Component {
                     <div className = 'col-sm-12'>
                         <form action = '../../public/files/php/index.php' method = 'post'>
                             <div className = 'form-group'>
-                                <label name = 'name'>Name</label>
+                                <label name = 'name'>Full Name</label>
                                 <input 
                                     type = 'text' 
                                     className = 'form-control' 
                                     name = 'name' 
-                                    value = {this.state.name}
+                                    value = {this.state.subject}
                                     onChange = {event => this.setState({
-                                        name: event.target.value
+                                        subject: event.target.value
                                     })}
                                     />
                             </div>
@@ -77,19 +75,20 @@ class Contact extends Component {
                                     type = 'email' 
                                     className = 'form-control'
                                     name = 'email'
-                                    value = {this.state.email}
+                                    value = {this.state.from}
                                     onChange = {event => this.setState({
-                                        email: event.target.value
+                                        from: event.target.value
                                     })}/>
                             </div>
                             <div className = 'form-group'>
                                 <label name = 'message'>Message</label>
                                 <input 
-                                    type = 'text' 
+                                    type = 'text'
+                                    name = 'message'
                                     className = 'form-control'
-                                    value = {this.state.message}
+                                    value = {this.state.text}
                                     onChange = {event => this.setState({
-                                        message: event.target.value
+                                        text: event.target.value
                                     })}/>
                             </div>
                             <button type = 'submit' className = 'btn btn-primary' onClick = {event => this.handleFormSubmit(event)}>Submit</button>
