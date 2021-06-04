@@ -10,10 +10,13 @@ export default function Nav() {
                     <a className = 'nav-link nav-links-css' href = '#bio'>Bio</a>
                 </li>
                 <li className = 'nav-item'>
-                    <a className = 'nav-link nav-links-css' href = '#experience'>Skills</a>
+                    <a className = 'nav-link nav-links-css' href = '#skills'>Skills</a>
                 </li>
                 <li className = 'nav-item'>
                     <a className = 'nav-link nav-links-css' href = '#projects'>Projects</a>
+                </li>
+                <li className = 'nav-item'>
+                    <a className = 'nav-link nav-links-css' href = '#contact'>Contact</a>
                 </li>
                 <li className = 'nav-item'>
                     <a className = 'nav-link nav-links-css' href = '/files/Resume.pdf'>Resume</a>

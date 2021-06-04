@@ -3,7 +3,7 @@ import '../css/bio.css';
 
 export default function Bio() {
     return (
-        <div className = 'container'>
+        <div className = 'container' id = 'bio'>
             <div className = 'row row-margin'>
                 <div className = 'col-sm-12 col-md-4'>
                     <div className = 'headshot-container'>

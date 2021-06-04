@@ -1,12 +1,12 @@
 import React from 'react';
-import '../css/experience.css';
+import '../css/skills.css';
 
-export default function Experience() {
+export default function Skills() {
     return (
         <div className = 'container'>
-            <div className = 'row' id = 'experience'>
+            <div className = 'row' id = 'skills'>
                 <div className = 'col-sm-12 col-md-12'>
-                    <p className = 'centered' id = 'experience-title'>Skills</p>
+                    <p className = 'centered' id = 'skills-title'>Skills</p>
                 </div>
             </div>
             <div className = 'row row-margin-2'>
